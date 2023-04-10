@@ -1,0 +1,19 @@
+<article class="card">
+  <div class="character-info">
+    <div class="divider">
+      <h2><a routerLink="/personaje/{{character.id}}"><b>{{character.id}} - {{character.name}}</b></a></h2><br>
+      <label class="status-indicator-info">Estatus: 
+        <span>{{character.status | characterStatus: character.gender}}</span> 
+        <b [ngClass]="character.status | characterStatusIcon"></b>
+      </label>   
+      <br>
+      <label>Especie: <span>{{character.species | characterSpecie: character.gender }}</span></label> 
+    </div>
+  </div>
+
+  <a routerLink="/personaje/{{character.id}}">
+    <div class="character-image"> 
+      <img src="{{character.image}}" alt="image of {{character.name}}">
+    </div>
+  </a>
+</article>

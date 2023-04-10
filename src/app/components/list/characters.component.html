@@ -1,0 +1,29 @@
+<main class="jumbotron">
+  <section class="animated fadeIn">
+    <p class="lead centerWhite"><b>Lista de personajes de la serie de Rick and Morty, si quieres ver mas detalle de los personajes da clic sobre su nombre ó imagen</b></p>
+    <p class="lead centerWhite"><b>Navega con los botones para conocer todos los personajes</b></p>
+  </section>
+  <hr class="my-4">
+
+  <div class="row margin-bottom">
+    <div class="col-md-3 centerYellow">
+      <h2>Página {{page}} de 42</h2>
+    </div>
+    <div class="col-md-5"></div>
+    <div class="col-md-2">
+      <button class="btn btn-outline-dark" role="button" (click)="previoustPage()">
+        Personajes anteriores
+      </button>
+    </div>
+    <div class="col-md-2">
+      <button class="btn btn-outline-dark" role="button" (click)="nextPage()">
+        Personajes siguientes
+      </button>
+    </div>
+  </div>
+
+  <section class="wrapper animated fadeIn fast">
+    <app-character-card *ngFor="let character of characters" [character]="character" class="card"></app-character-card>
+  </section>
+  <hr class="my-4">
+</main>

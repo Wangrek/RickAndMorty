@@ -1,1 +1,112 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:host {
+  font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  font-size: 14px;
+  color: #333;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
+.main-container {
+  margin-top: 20px;
+}
+
+.jumbotron {
+  padding: 1rem 1rem;
+  background-color: #1994d9;
+  border-radius: 0.3rem;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1920px;
+  width: 102%;
+  transform: translate(-1%);
+  border-radius: 10px;
+  padding-bottom: 30px;
+}
+
+b {
+  font-weight: 600;
+}
+
+.status-indicator {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+}
+
+.alive {
+  background-color: rgb(51, 191, 0);
+}
+.dead {
+  background-color: #ff0000;
+}
+.unknown {
+  background-color: rgb(131, 131, 131);
+}
+
+/* Animaciones */
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.fast {
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+.centerRedTittle {
+  color: #c11c1c;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.centerWhite {
+  color: white;
+  text-align: center;
+}
+
+.centerYellow {
+  color: yellow;
+  text-align: center;
+}

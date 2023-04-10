@@ -1,0 +1,45 @@
+<main class="jumbotron">
+  <section class="animated fadeIn">
+    <hr class="my-4">
+  </section>
+  <section class="animated fadeIn fast">
+    <article class="row">
+      <div class="col-md-4">
+        <div class="img-wrapper">
+          <img src="{{character.image}}" alt="" srcset="" class="img-fluid">
+        </div>
+        <a [routerLink]="['/personajes']" class="btn btn-outline-dark btn-block">Regresar a los personajes</a>
+      </div>
+
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-md-11">
+            <h3>{{character.name}}</h3>
+          </div>
+        </div>
+        <hr>
+        <div class="flex flex-dir-col">
+
+          <div>
+            Especie:
+            <span>{{character.species | characterSpecie: character.gender}}</span>
+          </div>
+
+          <div class="flex alig-center">
+            Género: <span>{{character.gender | characterGender}}</span>
+          </div>
+
+          <div class="flex alig-center">
+            Estatus: <span>{{character.status | characterStatus: character.gender}}</span>
+            <b [ngClass]="character.status | characterStatusIcon"></b>
+          </div>
+
+          <div class="flex alig-center">
+            Origen: <span>{{origen}}</span>
+          </div>
+
+        </div>
+      </div>
+    </article>
+  </section>
+</main>
